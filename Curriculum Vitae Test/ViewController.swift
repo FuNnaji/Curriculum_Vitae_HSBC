@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         setupFeedbackLabel()
         
         let url = URL(string: cvDataUrlString)!
-        fetchCVData(url: url, completionHandler: {[weak self] vitae in
+        DataController.fetchCVData(url: url, completionHandler: {[weak self] vitae in
             self?.onSuccessLoadingData(vitae: vitae)
         }, errorHandler: {[weak self] error in
             self?.onErrorLoadingData(error: error)
@@ -65,6 +65,7 @@ extension ViewController {
         let feedbackScrollView = UIScrollView()
         feedbackScrollView.addTo(parentView: view)
         feedbackView.addTo(parentView: feedbackScrollView)
+        feedbackView.widthAnchor.constraint(equalTo: feedbackScrollView.widthAnchor).isActive = true
     }
     
     private func setupImageView(vitae: Vitae) {
@@ -72,7 +73,7 @@ extension ViewController {
         cvImageView.backgroundColor = .lightGray
         feedbackView.addSubview(cvImageView)
         NSLayoutConstraint.activate([
-            cvImageView.topAnchor.constraint(equalTo: feedbackView.topAnchor, constant: 15),
+            cvImageView.topAnchor.constraint(equalTo: feedbackView.topAnchor, constant: view.safeAreaInsets.top + 15),
             cvImageView.trailingAnchor.constraint(equalTo: feedbackView.trailingAnchor, constant: -15),
             cvImageView.heightAnchor.constraint(equalToConstant: 80),
             cvImageView.widthAnchor.constraint(equalToConstant: 80)
@@ -81,7 +82,7 @@ extension ViewController {
         cvImageView.clipsToBounds = true
         cvImageView.contentMode = .scaleAspectFill
         let url = URL(string: vitae.CVImage)!
-        fetchImageData(url: url, completionHandler: {[weak cvImageView] data in
+        DataController.fetchImageData(url: url, completionHandler: {[weak cvImageView] data in
             cvImageView?.image = UIImage(data: data)
         })
     }
@@ -116,9 +117,9 @@ private extension UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         parentView.addSubview(self)
         NSLayoutConstraint.activate([
-            self.topAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.topAnchor),
-            self.leadingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.leadingAnchor),
-            self.trailingAnchor.constraint(equalTo: parentView.safeAreaLayoutGuide.trailingAnchor),
+            self.topAnchor.constraint(equalTo: parentView.topAnchor),
+            self.leadingAnchor.constraint(equalTo: parentView.leadingAnchor),
+            self.trailingAnchor.constraint(equalTo: parentView.trailingAnchor),
             self.bottomAnchor.constraint(equalTo: parentView.bottomAnchor)
         ])
     }

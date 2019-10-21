@@ -11,11 +11,12 @@ import XCTest
 
 class Curriculum_Vitae_TestTests: XCTestCase {
 
-    func testFetchingCV() {
-        let url = URL(string: cvDataUrlString)!
-        fetchCVData(url: url, completionHandler: {vitae in
-            XCTAssertEqual("Farouk Uzoma Nanjiofor", vitae.name)
-        }, errorHandler: {_ in })
+    func testParsingCV() {
+        let asset = NSDataAsset(name: "dataset.json")
+        DataController.parseCVData(data: asset!.data,
+                                   completionHandler: {vitae in
+                                        XCTAssertEqual("Farouk Uzoma Nnajiofor", vitae.name)},
+                                   errorHandler: {_ in })
     }
 
 }

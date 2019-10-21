@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		971087B5235E58BB005FA6F2 /* Vitae.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971087B4235E58BB005FA6F2 /* Vitae.swift */; };
 		9768283B235E35C0003AE171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9768283A235E35C0003AE171 /* AppDelegate.swift */; };
 		9768283D235E35C0003AE171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9768283C235E35C0003AE171 /* ViewController.swift */; };
 		97682840235E35C0003AE171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9768283E235E35C0003AE171 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		971087B4235E58BB005FA6F2 /* Vitae.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitae.swift; sourceTree = "<group>"; };
 		97682837235E35BF003AE171 /* Curriculum Vitae Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Curriculum Vitae Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9768283A235E35C0003AE171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9768283C235E35C0003AE171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				9768283A235E35C0003AE171 /* AppDelegate.swift */,
 				9768283C235E35C0003AE171 /* ViewController.swift */,
 				9768285A235E362B003AE171 /* DataController.swift */,
+				971087B4235E58BB005FA6F2 /* Vitae.swift */,
 				9768283E235E35C0003AE171 /* Main.storyboard */,
 				97682841235E35C2003AE171 /* Assets.xcassets */,
 				97682843235E35C2003AE171 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				9768283D235E35C0003AE171 /* ViewController.swift in Sources */,
 				9768285B235E362B003AE171 /* DataController.swift in Sources */,
 				9768283B235E35C0003AE171 /* AppDelegate.swift in Sources */,
+				971087B5235E58BB005FA6F2 /* Vitae.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
