@@ -12,7 +12,7 @@ let cvDataUrlString = "https://firebasestorage.googleapis.com/v0/b/malta-b7a9a.a
 
 class DataController {
     
-    static func fetchData(url: URL,
+    static private func fetchData(url: URL,
                    completionHandler: @escaping (Data?, Error?) -> Void) {
         let cvDownloadTask = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) in
             completionHandler(data, error)
@@ -61,7 +61,7 @@ class DataController {
         
     }
     
-    static func decodeDataFromJSONToVitae(data: Data) -> (Vitae?, String?) {
+    static private func decodeDataFromJSONToVitae(data: Data) -> (Vitae?, String?) {
         do {
             return (try JSONDecoder().decode(Vitae.self, from: data), nil)
         } catch {
@@ -72,7 +72,7 @@ class DataController {
     static func fetchImageData(url: URL,
                         completionHandler: @escaping (Data) -> Void) {
         
-        fetchData(url: url, completionHandler: {data, _ in
+        DataController.fetchData(url: url, completionHandler: {data, _ in
             if let data = data {
                 DispatchQueue.main.async {
                     completionHandler(data)
