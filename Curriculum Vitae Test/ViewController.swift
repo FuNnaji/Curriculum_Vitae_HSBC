@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    lazy var feedbackView = {return UIView(frame: .zero)}()
+    lazy var feedbackView = {return UIView()}()
     lazy var cvImageView = {return UIImageView(frame: .zero)}()
     
     let feedbacklabel = UILabel(frame: .zero)
@@ -72,7 +72,7 @@ extension ViewController {
         cvImageView.backgroundColor = .lightGray
         feedbackView.addSubview(cvImageView)
         NSLayoutConstraint.activate([
-            cvImageView.topAnchor.constraint(equalTo: feedbackView.topAnchor, constant: 30),
+            cvImageView.topAnchor.constraint(equalTo: feedbackView.topAnchor, constant: 15),
             cvImageView.trailingAnchor.constraint(equalTo: feedbackView.trailingAnchor, constant: -15),
             cvImageView.heightAnchor.constraint(equalToConstant: 80),
             cvImageView.widthAnchor.constraint(equalToConstant: 80)
@@ -87,24 +87,24 @@ extension ViewController {
     }
     
     private func setupLabels(vitae: Vitae) {
-        feedbackView.add(label: nameLabel, aboveView: cvImageView, value: vitae.name, topAnchorConstant: 30, font: UIFont.systemFont(ofSize: 21, weight: .bold), color: .black)
+        feedbackView.add(label: nameLabel, aboveView: cvImageView, value: vitae.name, topAnchorConstant: 15, font: UIFont.systemFont(ofSize: 21, weight: .bold), color: .black)
         
         feedbackView.add(label: titleLabel, aboveView: nameLabel, value: vitae.title, topAnchorConstant: 0, font: UIFont.systemFont(ofSize: 16, weight: .medium), color: .lightGray)
         
         feedbackView.add(label: socialMediaLabel, aboveView: titleLabel, value: vitae.socialMedia, topAnchorConstant: 3, font: UIFont.systemFont(ofSize: 11, weight: .semibold), color: .darkGray)
         
-        feedbackView.add(label: bioLabel, aboveView: socialMediaLabel, value: vitae.bio, topAnchorConstant: 30, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
+        feedbackView.add(label: bioLabel, aboveView: socialMediaLabel, value: vitae.bio, topAnchorConstant: 15, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
         
-        feedbackView.add(label: skillsLabel, aboveView: bioLabel, value: vitae.skills, topAnchorConstant: 30, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
+        feedbackView.add(label: skillsLabel, aboveView: bioLabel, value: vitae.skills, topAnchorConstant: 15, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
         
-        feedbackView.add(label: educationLabel, aboveView: skillsLabel, value: vitae.education, topAnchorConstant: 30, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
+        feedbackView.add(label: educationLabel, aboveView: skillsLabel, value: vitae.education, topAnchorConstant: 15, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
         
-        feedbackView.add(label: experienceLabel, aboveView: educationLabel, value: vitae.experiences, topAnchorConstant: 30, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
+        feedbackView.add(label: experienceLabel, aboveView: educationLabel, value: vitae.experiences, topAnchorConstant: 15, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
         
-        feedbackView.add(label: referenceLabel, aboveView: experienceLabel, value: vitae.references, topAnchorConstant: 30, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
+        feedbackView.add(label: referenceLabel, aboveView: experienceLabel, value: vitae.references, topAnchorConstant: 15, font: UIFont.systemFont(ofSize: 15, weight: .medium), color: .darkGray)
         
         NSLayoutConstraint.activate([
-            referenceLabel.bottomAnchor.constraint(equalTo: feedbackView.bottomAnchor, constant: -30)
+            referenceLabel.bottomAnchor.constraint(equalTo: feedbackView.bottomAnchor, constant: -15)
         ])
     }
     
@@ -130,12 +130,12 @@ private extension UIView {
         label.font = font
         label.textColor = color
         self.addSubview(label)
+        label.text = value
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: aboveView.bottomAnchor, constant: topAnchorConstant),
             label.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             label.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15)
-            ])
-        label.text = value
+        ])
     }
     
 }
