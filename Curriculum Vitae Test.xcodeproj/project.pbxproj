@@ -13,6 +13,7 @@
 		97682842235E35C2003AE171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97682841235E35C2003AE171 /* Assets.xcassets */; };
 		97682845235E35C2003AE171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97682843235E35C2003AE171 /* LaunchScreen.storyboard */; };
 		97682850235E35C2003AE171 /* Curriculum_Vitae_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9768284F235E35C2003AE171 /* Curriculum_Vitae_TestTests.swift */; };
+		9768285B235E362B003AE171 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9768285A235E362B003AE171 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		9768284B235E35C2003AE171 /* Curriculum Vitae TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Curriculum Vitae TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9768284F235E35C2003AE171 /* Curriculum_Vitae_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curriculum_Vitae_TestTests.swift; sourceTree = "<group>"; };
 		97682851235E35C2003AE171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9768285A235E362B003AE171 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				9768283A235E35C0003AE171 /* AppDelegate.swift */,
 				9768283C235E35C0003AE171 /* ViewController.swift */,
+				9768285A235E362B003AE171 /* DataController.swift */,
 				9768283E235E35C0003AE171 /* Main.storyboard */,
 				97682841235E35C2003AE171 /* Assets.xcassets */,
 				97682843235E35C2003AE171 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9768283D235E35C0003AE171 /* ViewController.swift in Sources */,
+				9768285B235E362B003AE171 /* DataController.swift in Sources */,
 				9768283B235E35C0003AE171 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +373,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "FuNnaji.Curriculum-Vitae-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -387,7 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "FuNnaji.Curriculum-Vitae-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
