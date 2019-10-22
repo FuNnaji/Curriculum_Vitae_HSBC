@@ -18,7 +18,7 @@ class Curriculum_Vitae_TestTests: XCTestCase {
         
         let parsingExpectation = expectation(description: "Parsing CV Data...")
         
-        let asset = NSDataAsset(name: "dataset.json")
+        let asset = NSDataAsset.init(name: "dataset.json", bundle: Bundle(for: Curriculum_Vitae_TestTests.self))
         DataController.parseCVData(data: asset!.data,
                                    completionHandler: {vitae in
                                         testVitae = vitae
