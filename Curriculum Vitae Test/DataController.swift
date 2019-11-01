@@ -8,7 +8,7 @@
 
 import Foundation
 
-let cvDataUrlString = "https://firebasestorage.googleapis.com/v0/b/malta-b7a9a.appspot.com/o/HSBC%20Recuirtmant%20Data%2Fdataeset.json?alt=media&token=7ae9770f-f8f1-42f0-89f4-9eefdc68db1c"
+let cvDataUrlString = "https://firebasestorage.googleapis.com/v0/b/funnaji-e5102.appspot.com/o/dataset.json?alt=media&token=40f8485c-ad7c-437c-b339-f1d9eaec36b2"
 
 class DataController {
     
