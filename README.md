@@ -1,6 +1,6 @@
 # Curriculum Vitae
 
-A simple project show casing async network call.
+A simple project showcasing async network call.
 
 ## Req
 
