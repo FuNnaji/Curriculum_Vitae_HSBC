@@ -1,4 +1,7 @@
 # Curriculum Vitae
 
-* Open the Xcode project
-* Used Swift 4.2
+A simple project show casing async network call.
+
+## Req
+
+* Xcode
