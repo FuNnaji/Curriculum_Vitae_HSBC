@@ -2,6 +2,6 @@
 
 A simple project showcasing async network call.
 
-## Req
+## Requirements
 
 * Xcode
